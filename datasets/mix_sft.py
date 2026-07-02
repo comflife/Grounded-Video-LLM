@@ -21,6 +21,7 @@ class MixSFT(Dataset):
         num_temporal_tokens = 300,
         sample='rand',
         llm='phi3.5',
+        resize_mode='crop',
     ):
         self.video_path = video_path
         self.num_frames = num_frames
@@ -38,8 +39,8 @@ class MixSFT(Dataset):
             self.chat_template = Phi_3_5_Template()
 
 
-        self.video_processor = frame_transform(image_size=224, mean=INTERNVIDEO_MEAN, std=INTERNVIDEO_STD)
-        self.image_processor = frame_transform(image_size=336, mean=OPENAI_DATASET_MEAN, std=OPENAI_DATASET_STD)
+        self.video_processor = frame_transform(image_size=224, mean=INTERNVIDEO_MEAN, std=INTERNVIDEO_STD, resize_mode=resize_mode)
+        self.image_processor = frame_transform(image_size=336, mean=OPENAI_DATASET_MEAN, std=OPENAI_DATASET_STD, resize_mode=resize_mode)
 
         self.video_ids = []
         self.question_ids = []
@@ -149,7 +150,6 @@ class MixSFT(Dataset):
 #     print("spatial_pixel_values: ",             entry['spatial_pixel_values'].shape)
 #     print()
 # print(len(dataset))
-
 
 
 

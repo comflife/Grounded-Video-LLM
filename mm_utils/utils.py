@@ -1,9 +1,11 @@
+import json
+import pickle
+
+import pandas as pd
 import requests
+import torch
 from PIL import Image
 from io import BytesIO
-import json
-import pandas as pd
-import pickle
 from torchvision.transforms import Normalize, Compose, InterpolationMode, ToTensor, Resize, CenterCrop, ToPILImage
 from typing import Optional, Tuple, Any, Union, List
 
@@ -155,6 +157,7 @@ def frame_transform(
         rescale_factor: float = 1.0,
         mean: Optional[Tuple[float, ...]] = None,
         std: Optional[Tuple[float, ...]] = None,
+        resize_mode: str = "crop",
 ):
     mean = mean or OPENAI_DATASET_MEAN
     if not isinstance(mean, (list, tuple)):
@@ -164,17 +167,29 @@ def frame_transform(
     if not isinstance(std, (list, tuple)):
         std = (std,) * 3
     
-    if isinstance(image_size, (list, tuple)) and image_size[0] == image_size[1]:
-        # for square size, pass size as int so that Resize() uses aspect preserving shortest edge
-        image_size = image_size[0]
-
     normalize = Normalize(mean=mean, std=std)
-    
-    transforms = [
-        ToPILImage(),
-        Resize(image_size, interpolation=InterpolationMode.BICUBIC),
-        CenterCrop(image_size),
-    ]
+
+    if resize_mode == "crop":
+        if isinstance(image_size, (list, tuple)) and image_size[0] == image_size[1]:
+            # for square size, pass size as int so that Resize() uses aspect preserving shortest edge
+            image_size = image_size[0]
+        transforms = [
+            ToPILImage(),
+            Resize(image_size, interpolation=InterpolationMode.BICUBIC),
+            CenterCrop(image_size),
+        ]
+    elif resize_mode == "squash":
+        if isinstance(image_size, int):
+            resize_size = (image_size, image_size)
+        else:
+            resize_size = tuple(image_size)
+        transforms = [
+            ToPILImage(),
+            Resize(resize_size, interpolation=InterpolationMode.BICUBIC),
+        ]
+    else:
+        raise ValueError(f"Unsupported resize_mode: {resize_mode}")
+
     transforms.extend([
         _convert_to_rgb,
         ToTensor(),
@@ -288,6 +303,62 @@ def load_csv(path):
 def get_parameter_number(model):
     total_num = sum(p.numel() for p in model.parameters())
     trainable_num = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    return {'Total': total_num, 'Trainable': trainable_num} 
+    return {'Total': total_num, 'Trainable': trainable_num}
 
+
+def normalize_checkpoint_keys(state_dict):
+    normalized = {}
+    for key, value in state_dict.items():
+        key = key.replace("._fsdp_wrapped_module", "")
+        key = key.replace("._checkpoint_wrapped_module", "")
+        normalized[key] = value
+    return normalized
+
+
+def _is_vocab_projection_key(key):
+    return (
+        key.endswith("embed_tokens.weight")
+        or key.endswith("lm_head.weight")
+        or key.endswith("lm_head.bias")
+    )
+
+
+def load_state_dict_flexible(module, state_dict, normalize_keys=False):
+    """Load a checkpoint, copying only the overlapping vocab rows when sizes differ."""
+    if normalize_keys:
+        state_dict = normalize_checkpoint_keys(state_dict)
+
+    model_state = module.state_dict()
+    matched = {}
+    partial_keys = []
+
+    for key, value in state_dict.items():
+        if key not in model_state:
+            continue
+        target = model_state[key]
+        if target.shape == value.shape:
+            matched[key] = value
+        elif _is_vocab_projection_key(key) and (
+            (target.dim() == 2 and value.dim() == 2 and target.shape[1] == value.shape[1])
+            or (target.dim() == 1 and value.dim() == 1)
+        ):
+            partial_keys.append(key)
+
+    incompatible = module.load_state_dict(matched, strict=False)
+
+    if partial_keys:
+        named_params = dict(module.named_parameters())
+        for key in partial_keys:
+            if key not in named_params:
+                continue
+            param = named_params[key]
+            source = state_dict[key].to(device=param.device, dtype=param.dtype)
+            rows = min(param.shape[0], source.shape[0])
+            param.data[:rows].copy_(source[:rows])
+
+    return {
+        "missing": list(incompatible.missing_keys),
+        "unexpected": list(incompatible.unexpected_keys),
+        "partial_vocab_keys": partial_keys,
+    }
 

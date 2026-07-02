@@ -12,6 +12,7 @@ pandas==2.2.3
 peft==0.3.0
 Pillow==11.1.0
 Requests==2.32.3
+rich==15.0.0
 timm==1.0.15
 torch==2.1.2
 torchdata==0.8.0

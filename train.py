@@ -22,11 +22,12 @@ def parse_args():
     parser.add_argument('--model', type=str, default='llava_next_video', choices=['llava_next_video'])
     parser.add_argument('--llm', type=str, default='phi3.5', choices=['llama3', 'vicuna', 'phi3.5'])
 
-    parser.add_argument('--dataset', type=str, default='mix_sft', choices=['mix_pretrain', 'mix_grounded', 'mix_sft'])
+    parser.add_argument('--dataset', type=str, default='mix_sft', choices=['mix_pretrain', 'mix_grounded', 'mix_sft', 'mix_grounded_nuscenes'])
     parser.add_argument('--max_txt_len', type=int, default=2048)
     parser.add_argument('--num_temporal_tokens', type=int, default=300)
     parser.add_argument('--num_frames', type=int, default=96)
     parser.add_argument('--num_segs', type=int, default=12)
+    parser.add_argument('--video_resize_mode', type=str, default='crop', choices=['crop', 'squash'])
     parser.add_argument('--stage', type=str, default="sft", choices=['pretrain', 'grounded', 'sft'])
     parser.add_argument('--lora', action='store_true')
     parser.add_argument('--attn_implementation', type=str, default="flash_attention_2", choices=['eager', 'flash_attention_2']) # choose 'eager' if you cannot install flash_attention_2
@@ -50,6 +51,10 @@ def parse_args():
     parser.add_argument('--pretrained_vision_proj_llm_path', type=str, default='weight_path/Phi-3.5-vision-instruct-seperated/')
     
     parser.add_argument('--data_dir', type=str, default='/home/haibo/data')
+    parser.add_argument('--original_data_dir', type=str, default='', help='Video root for original mix_grounded subset.')
+    parser.add_argument('--original_anno_path', type=str, default='', help='JSON path for original mix_grounded subset.')
+    parser.add_argument('--nuscenes_data_dir', type=str, default='', help='Video root for nuScenes ego-causal data.')
+    parser.add_argument('--nuscenes_anno_path', type=str, default='', help='JSON path for nuScenes ego-causal train split.')
     parser.add_argument('--save_dir', type=str, default='./experiments')
     parser.add_argument('--pretrained_proj', type=str, default='')
 
@@ -117,11 +122,16 @@ def pretrain(args) -> None:
         if args.stage in ['grounded', 'sft'] and len(args.pretrained_proj) > 0 and args.llm in args.pretrained_proj:
             ckpt = torch.load(args.pretrained_proj, map_location='cpu')['model']
             if 'multi_modal_projector' in ckpt.keys():
-                model.multi_modal_projector.load_state_dict(ckpt['multi_modal_projector'])
+                model.multi_modal_projector.load_state_dict(ckpt['multi_modal_projector'], strict=False)
             if 'video_projecter' in ckpt.keys():
-                model.video_projecter.load_state_dict(ckpt['video_projecter'])
+                model.video_projecter.load_state_dict(ckpt['video_projecter'], strict=False)
             if 'language_model' in ckpt.keys():
-                model.language_model.load_state_dict(ckpt['language_model'])
+                report = load_state_dict_flexible(model.language_model, ckpt['language_model'])
+                if overwatch.is_rank_zero() and report['partial_vocab_keys']:
+                    overwatch.info(
+                        "Partial language-model vocab load: "
+                        f"{report['partial_vocab_keys']}"
+                    )
 
     if overwatch.is_rank_zero():
         print(get_parameter_number(model))
@@ -149,6 +159,7 @@ def pretrain(args) -> None:
         num_temporal_tokens = args.num_temporal_tokens,
         sample='middle',
         llm=args.llm,
+        resize_mode=args.video_resize_mode,
         )
     elif args.dataset == 'mix_sft':
         from datasets.mix_sft import MixSFT
@@ -160,6 +171,45 @@ def pretrain(args) -> None:
         num_temporal_tokens = args.num_temporal_tokens,
         sample='middle',
         llm=args.llm,
+        resize_mode=args.video_resize_mode,
+        )
+    elif args.dataset == 'mix_grounded_nuscenes':
+        from datasets.mix_grounded import MixGrounded
+        from torch.utils.data import ConcatDataset
+
+        original_data_dir = args.original_data_dir or args.data_dir
+        original_anno_path = args.original_anno_path or os.path.join(
+            original_data_dir, 'mix_grounded_subset/mix_grounded.json'
+        )
+        nuscenes_data_dir = args.nuscenes_data_dir or args.data_dir
+        nuscenes_anno_path = args.nuscenes_anno_path or os.path.join(
+            nuscenes_data_dir, 'mix_grounded/mix_grounded.json'
+        )
+
+        original_dataset = MixGrounded(
+            anno_path=original_anno_path,
+            video_path=original_data_dir,
+            num_frames=args.num_frames,
+            num_segs=args.num_segs,
+            num_temporal_tokens=args.num_temporal_tokens,
+            sample='middle',
+            llm=args.llm,
+            resize_mode='crop',
+        )
+        nuscenes_dataset = MixGrounded(
+            anno_path=nuscenes_anno_path,
+            video_path=nuscenes_data_dir,
+            num_frames=args.num_frames,
+            num_segs=args.num_segs,
+            num_temporal_tokens=args.num_temporal_tokens,
+            sample='middle',
+            llm=args.llm,
+            resize_mode=args.video_resize_mode,
+        )
+        train_dataset = ConcatDataset([original_dataset, nuscenes_dataset])
+        overwatch.info(
+            f"Mixed dataset: original={len(original_dataset)} ({original_anno_path}), "
+            f"nuScenes={len(nuscenes_dataset)} ({nuscenes_anno_path}), total={len(train_dataset)}"
         )
 
     # Create Train Strategy

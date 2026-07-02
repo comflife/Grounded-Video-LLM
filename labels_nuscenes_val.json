@@ -1,0 +1,4698 @@
+{
+  "meta": {
+    "dataset": "nuscenes",
+    "split": "val",
+    "splits_included": [
+      "val"
+    ],
+    "scene_count": 150,
+    "keep_count": 56,
+    "ignore_count": 94,
+    "unlabeled_count": 0,
+    "gt_label_rule": "keep=true if any annotator kept; false if decisions exist but none keep; null if untriaged",
+    "causal_agents_rule": "union across annotators; frame span = min/max labeled frame (0-based within scene)",
+    "frame_indexing": "0-based position within each scene's frames"
+  },
+  "scenes": [
+    {
+      "scene_token": "e7ef871f77f44331aefdebc24ec034b7",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 19,
+      "causal_agents": [
+        {
+          "instance_token": "35a767667a984516bf1feb228c03de03",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 9,
+          "causal_frame_count": 10,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "5f51a3503ea140769371b9824533a607",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 23,
+          "causal_frame_count": 24,
+          "labeled_by_count": 4
+        },
+        {
+          "instance_token": "6a5ac999ea6b48d5b893e372c4d291c4",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "88081a9cb6c74d5190af6d6ea845a6de",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 27,
+          "causal_frame_count": 27,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "a5f12393fdf042a4a1c25cbe29f3f4ea",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 9,
+          "causal_frame_count": 10,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "24082a541e824068815c8b6824360b39",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 9,
+          "causal_last_frame": 27,
+          "causal_frame_count": 18,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "069a7d8902d14560b1890064b43a1a15",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 11,
+          "causal_last_frame": 38,
+          "causal_frame_count": 28,
+          "labeled_by_count": 6
+        },
+        {
+          "instance_token": "142f6b9c8b1749d9bdcd111ea138a996",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 11,
+          "causal_last_frame": 27,
+          "causal_frame_count": 17,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "6732e9261cdd424c940705506bad2b4e",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 11,
+          "causal_last_frame": 27,
+          "causal_frame_count": 17,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "6815cdaabf06477fba4f068944611217",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 11,
+          "causal_last_frame": 27,
+          "causal_frame_count": 17,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "87691f486ec14368a997ad7dc0b1e8a4",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 11,
+          "causal_last_frame": 27,
+          "causal_frame_count": 17,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "a721d524937f4a228fa6aac3296fb3bc",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 11,
+          "causal_last_frame": 38,
+          "causal_frame_count": 28,
+          "labeled_by_count": 6
+        },
+        {
+          "instance_token": "c14fa01c8925449f8c32dd76f8421842",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 11,
+          "causal_last_frame": 27,
+          "causal_frame_count": 17,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "c4655acf4f2b4dab817413eb13a9e22c",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 11,
+          "causal_last_frame": 27,
+          "causal_frame_count": 17,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "cc9bfe4ab58a44e8b11dd8711d36bcbf",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 11,
+          "causal_last_frame": 27,
+          "causal_frame_count": 17,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "d2800b402fd64bf1a0fef1844313f1fe",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 11,
+          "causal_last_frame": 27,
+          "causal_frame_count": 17,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "ed71fa49b49c47aaa8f1de7880332ac8",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 11,
+          "causal_last_frame": 38,
+          "causal_frame_count": 28,
+          "labeled_by_count": 6
+        },
+        {
+          "instance_token": "efc3e39c940e48c8a7440154829606f0",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 11,
+          "causal_last_frame": 27,
+          "causal_frame_count": 17,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "f767b77d7595416dae214ad03385453e",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 11,
+          "causal_last_frame": 27,
+          "causal_frame_count": 17,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "265f002f02d447ad9074813292eef75e",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "41fde20fedcd4d22ab26811688612870",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "d1e57234fd6a463d963670938f9f556e",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "1d95a89e0f284f92a754704003ade0aa",
+          "agent_class": "bus",
+          "causal_first_frame": 0,
+          "causal_last_frame": 22,
+          "causal_frame_count": 23,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "813213458a214a39a1d1fc77fa52fa34",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "fdf400507c2445d79f409033d63e9cd4",
+          "agent_class": "bus",
+          "causal_first_frame": 0,
+          "causal_last_frame": 37,
+          "causal_frame_count": 36,
+          "labeled_by_count": 3
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "efa5c96f05594f41a2498eb9f2e7ad99",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 5,
+      "causal_agents": [
+        {
+          "instance_token": "0cc2bfe4b1cf455cbab4373c59fc10aa",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "24bf214b3e0a49909bf2066a0bb5ab6f",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "7638cf013b8f4e5a86f7114e1f5bfbb2",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 1,
+          "causal_frame_count": 2,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "531c02c5fd8944cdbdae6adf9977e58d",
+          "agent_class": "car",
+          "causal_first_frame": 17,
+          "causal_last_frame": 25,
+          "causal_frame_count": 9,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "7f790591ac9a4fe19cdd0a8d3a118880",
+          "agent_class": "car",
+          "causal_first_frame": 27,
+          "causal_last_frame": 39,
+          "causal_frame_count": 13,
+          "labeled_by_count": 3
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "3dd9ad3f963e4f588d75c112cbf07f56",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 13,
+      "causal_agents": [
+        {
+          "instance_token": "027f086b1fd34e95a2d13a929a13e59b",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 3,
+          "causal_last_frame": 11,
+          "causal_frame_count": 9,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "24395c28c07b4d6d8f2885b143c98bef",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 3,
+          "causal_last_frame": 20,
+          "causal_frame_count": 18,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "49550650c36c4b179da64bf17d7808c6",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 3,
+          "causal_last_frame": 27,
+          "causal_frame_count": 25,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "4adca0b036a54146a952d8add09127fb",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 3,
+          "causal_last_frame": 11,
+          "causal_frame_count": 9,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "7620d2ca607546899c7d131572bdb0bc",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 3,
+          "causal_last_frame": 23,
+          "causal_frame_count": 21,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "7624d42d9d4447bb929040335b902eba",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 3,
+          "causal_last_frame": 11,
+          "causal_frame_count": 9,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "7de94d598e9545038fefe46f423c0232",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 3,
+          "causal_last_frame": 11,
+          "causal_frame_count": 9,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "88711de3f0d448b98626103a3a3b8efa",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 3,
+          "causal_last_frame": 18,
+          "causal_frame_count": 16,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "a9d32bf5e1a74238ab3aaf483004037d",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 3,
+          "causal_last_frame": 24,
+          "causal_frame_count": 22,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "f8d4060238b445f3b037028c6f9a4a25",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 3,
+          "causal_last_frame": 11,
+          "causal_frame_count": 9,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "07d3c8ae4b6841cabe64919aa63bd685",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 7,
+          "causal_last_frame": 33,
+          "causal_frame_count": 27,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "f1ba934a1575443bb5c2dc2d7ceea775",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 28,
+          "causal_last_frame": 39,
+          "causal_frame_count": 12,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "ed5cfe238c0b4d2ebe32c15c8b5c8a4d",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 36,
+          "causal_last_frame": 39,
+          "causal_frame_count": 4,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "b51869782c0e464b8021eb798609f35f",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "3dd2be428534403ba150a0b60abc6a0a",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "16b2d97dc2824d5f9c9ebc094989dfa7",
+          "agent_class": "car",
+          "causal_first_frame": 24,
+          "causal_last_frame": 33,
+          "causal_frame_count": 10,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "989e590666aa41a7b5019bf71c2a5941",
+          "agent_class": "car",
+          "causal_first_frame": 24,
+          "causal_last_frame": 33,
+          "causal_frame_count": 10,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "5a0dd8908a3a459b83ec5eb6ac7d0f82",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "43c6e8cfafdd45e4ad49902fb908af7d",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 0,
+          "causal_last_frame": 4,
+          "causal_frame_count": 5,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "b8953f43a8ba405cb16e7bf838f14df4",
+          "agent_class": "car",
+          "causal_first_frame": 32,
+          "causal_last_frame": 36,
+          "causal_frame_count": 5,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "2f56eb47c64f43df8902d9f88aa8a019",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 4,
+      "causal_agents": [
+        {
+          "instance_token": "bcc8705837e4489699c18ddc7c9eeaec",
+          "agent_class": "truck",
+          "causal_first_frame": 2,
+          "causal_last_frame": 9,
+          "causal_frame_count": 8,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "1ccaab6e222a4311b15d141ba9e9dc75",
+          "agent_class": "truck",
+          "causal_first_frame": 13,
+          "causal_last_frame": 28,
+          "causal_frame_count": 16,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "dc1956cdb7444cfe9cbab3e84bb2dd6a",
+          "agent_class": "truck",
+          "causal_first_frame": 16,
+          "causal_last_frame": 28,
+          "causal_frame_count": 13,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "a012466762224684b8402cfbaa9dbda2",
+          "agent_class": "truck",
+          "causal_first_frame": 21,
+          "causal_last_frame": 28,
+          "causal_frame_count": 8,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "8edbc31083ab4fb187626e5b3c0411f7",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "7365495b74464629813b41eacdb711af",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 5,
+      "causal_agents": [
+        {
+          "instance_token": "033c58083ba24013a1b2723f2e0c1320",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "7913892739e7485cb92cb7c878c56112",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 27,
+          "causal_last_frame": 34,
+          "causal_frame_count": 8,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "a05890622e2e47b2b49ad27cdd702f79",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 27,
+          "causal_last_frame": 34,
+          "causal_frame_count": 8,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "bdcdf7eec5fb4f4e9585a927bd473009",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 27,
+          "causal_last_frame": 34,
+          "causal_frame_count": 8,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "17ff407c0e5b48f9b1fc642f635dcd0f",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 36,
+          "causal_last_frame": 39,
+          "causal_frame_count": 4,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 2,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "keep"
+          },
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "cba3ddd5c3664a43b6a08e586e094900",
+      "split": "val",
+      "num_frames": 39,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "91c071bcc1ad4fa1b555399e1cfbab79",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "b4b82c4d338a4b6d86835388ce076345",
+      "split": "val",
+      "num_frames": 39,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "68e79a88244f447f993a72da444b29ba",
+      "split": "val",
+      "num_frames": 39,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "565f61951e6d46a5b3de7d57150f5102",
+          "agent_class": "bicycle",
+          "causal_first_frame": 0,
+          "causal_last_frame": 19,
+          "causal_frame_count": 20,
+          "labeled_by_count": 3
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "2eb4d7f00e584a548aa0b899638bfb0a",
+      "split": "val",
+      "num_frames": 39,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "c65c4acf86954f8cbd53a3541a3bfa3a",
+      "split": "val",
+      "num_frames": 39,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "5af9c7f124d84e7e9ac729fafa40ea01",
+      "split": "val",
+      "num_frames": 39,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 4,
+      "causal_agents": [
+        {
+          "instance_token": "2e8c095f1be741c79a3ecaa0d0447b9b",
+          "agent_class": "car",
+          "causal_first_frame": 2,
+          "causal_last_frame": 13,
+          "causal_frame_count": 12,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "41ec0a4ed1d8430d90c5bfd076f181ab",
+          "agent_class": "car",
+          "causal_first_frame": 2,
+          "causal_last_frame": 17,
+          "causal_frame_count": 16,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "bba914e1b38143d18346f0dfe9751b90",
+          "agent_class": "car",
+          "causal_first_frame": 2,
+          "causal_last_frame": 5,
+          "causal_frame_count": 4,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "df93532381c7409abca8b75dd4628cd7",
+          "agent_class": "car",
+          "causal_first_frame": 5,
+          "causal_last_frame": 16,
+          "causal_frame_count": 12,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 2,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "keep"
+          },
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "afd73f70ff7d46d6b772d341c08e31a5",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "01452fbfbf4543af8acdfd3e8a1ee806",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 5,
+      "causal_agents": [
+        {
+          "instance_token": "48dd81b707b5419399dbf864203b4a65",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "5b282658f35248ffb284d1e5d68ada8d",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 2,
+          "causal_frame_count": 3,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "64a0b3183ac2438285dbf24e862d47f5",
+          "agent_class": "construction_vehicle",
+          "causal_first_frame": 0,
+          "causal_last_frame": 2,
+          "causal_frame_count": 3,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "790a802393044d0a917004d3ca4aec9a",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 0,
+          "causal_last_frame": 2,
+          "causal_frame_count": 3,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "c857aea77f814fd88f1f915f53053e7e",
+          "agent_class": "truck",
+          "causal_first_frame": 0,
+          "causal_last_frame": 2,
+          "causal_frame_count": 3,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "ddb615d9bb22484cabc6545b632a1025",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "fcbccedd61424f1b85dcbf8f897f9754",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "dc762bf1bc694d3e8141bf592f9b1456",
+          "agent_class": "car",
+          "causal_first_frame": 10,
+          "causal_last_frame": 26,
+          "causal_frame_count": 17,
+          "labeled_by_count": 3
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "c525507ee2ef4c6d8bb64b0e0cf0dd32",
+      "split": "val",
+      "num_frames": 39,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "2ed0fcbfc214478ca3b3ce013e7723ba",
+      "split": "val",
+      "num_frames": 39,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "bed67ef03c4a4066a74f6c0117d512ee",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "3b2ee26cb8484f77895bc336663df502",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "6fa6b8ad9d3244feb79ce3da33b214a1",
+          "agent_class": "bus",
+          "causal_first_frame": 26,
+          "causal_last_frame": 32,
+          "causal_frame_count": 7,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "cce2190af77648eba9213af090266919",
+          "agent_class": "bus",
+          "causal_first_frame": 26,
+          "causal_last_frame": 32,
+          "causal_frame_count": 7,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "a178a1b5415f45c08d179bd2cacdf284",
+      "split": "val",
+      "num_frames": 39,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 6,
+      "causal_agents": [
+        {
+          "instance_token": "4f3db0150b8f4335a351b23078a5b0a9",
+          "agent_class": "truck",
+          "causal_first_frame": 1,
+          "causal_last_frame": 12,
+          "causal_frame_count": 12,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "9560dba5bc7648628d3db5fb3e9d292f",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 1,
+          "causal_last_frame": 12,
+          "causal_frame_count": 12,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "bf604e2090d444a592bba4632e489292",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 1,
+          "causal_last_frame": 12,
+          "causal_frame_count": 12,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "fe53b45fce314162954d436735f45c06",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 1,
+          "causal_last_frame": 12,
+          "causal_frame_count": 12,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "22652adf8d4740fe8bae510d27aecb70",
+          "agent_class": "car",
+          "causal_first_frame": 12,
+          "causal_last_frame": 28,
+          "causal_frame_count": 17,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "0139d6175ba8418c8202ab98747a8961",
+          "agent_class": "construction_vehicle",
+          "causal_first_frame": 20,
+          "causal_last_frame": 33,
+          "causal_frame_count": 14,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "fb73d1a6c16147ee9416faf6b310fadb",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "d87ec0461e3f4c4ea29b0f0c0ede5167",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "4ca1f38088c74e60b65d871d99cce3df",
+          "agent_class": "car",
+          "causal_first_frame": 11,
+          "causal_last_frame": 18,
+          "causal_frame_count": 8,
+          "labeled_by_count": 3
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "acc29386502047339e1ec6b9c7e512d2",
+      "split": "val",
+      "num_frames": 39,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "c2d193e850eb415abe04a8834f54f45d",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 17,
+          "causal_frame_count": 18,
+          "labeled_by_count": 3
+        },
+        {
+          "instance_token": "dc91c22c5a6342b0a29dc03c22284847",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 17,
+          "causal_frame_count": 18,
+          "labeled_by_count": 3
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "c3ab8ee2c1a54068a72d7eb4cf22e43d",
+      "split": "val",
+      "num_frames": 39,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "5190f90afa0048deb0c7dc7990d099db",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 1,
+          "causal_last_frame": 9,
+          "causal_frame_count": 9,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "9f1f69646d644e35be4fe0122a8b91ef",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "2ca15f59d656489a8b1a0be4d9bead4e",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "8180a1dbbba3479bb0c7f4ff6e9a3f0e",
+      "split": "val",
+      "num_frames": 39,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "5206449eec0d42229bd1a12f1769f233",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 10,
+          "causal_frame_count": 11,
+          "labeled_by_count": 3
+        },
+        {
+          "instance_token": "5599ab4bc02047ea8e4dfd4c414e462c",
+          "agent_class": "car",
+          "causal_first_frame": 21,
+          "causal_last_frame": 38,
+          "causal_frame_count": 18,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "080a52cb8f59489b9cddc7b721808088",
+      "split": "val",
+      "num_frames": 39,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "75fc791c990646c38bde81a1ca9740d5",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 9,
+          "causal_frame_count": 10,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "1aa633b683174280b243e0a9a7ad9171",
+      "split": "val",
+      "num_frames": 39,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 4,
+      "causal_agents": [
+        {
+          "instance_token": "76c2a78da4e7414990e9a3d3a00e94ac",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 22,
+          "causal_frame_count": 23,
+          "labeled_by_count": 3
+        },
+        {
+          "instance_token": "b22af7e76b624b42b0f32411aff33087",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 22,
+          "causal_frame_count": 23,
+          "labeled_by_count": 3
+        },
+        {
+          "instance_token": "11ca86794fb8489faadc913dc553da1d",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 4,
+          "causal_last_frame": 15,
+          "causal_frame_count": 12,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "e8f9d3585b5949e6a3ad468c49418d00",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 4,
+          "causal_last_frame": 13,
+          "causal_frame_count": 10,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "9709626638f5406f9f773348150d02fd",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 9,
+      "causal_agents": [
+        {
+          "instance_token": "a08f86d9cade410da8c7e0a15d0d4187",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 14,
+          "causal_last_frame": 35,
+          "causal_frame_count": 22,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "a80ac864fdfe40c48e980e9e85a75ddb",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 14,
+          "causal_last_frame": 39,
+          "causal_frame_count": 26,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "ca5e73260a44432e82bfe3b3eaae2daf",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 14,
+          "causal_last_frame": 39,
+          "causal_frame_count": 26,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "fa587210b65e4ae6bb9684cd431a21c4",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 14,
+          "causal_last_frame": 39,
+          "causal_frame_count": 26,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "63eba4431717461aa0dfc941c1e43728",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 16,
+          "causal_last_frame": 39,
+          "causal_frame_count": 24,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "03e80cf766174e06b3f17b84b9c7cfe5",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 23,
+          "causal_last_frame": 39,
+          "causal_frame_count": 17,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "92a5fc06bb5a464ba6056a2c3a64c188",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 23,
+          "causal_last_frame": 39,
+          "causal_frame_count": 17,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "785f37f67dc14533b3b6479e04c5885b",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 33,
+          "causal_last_frame": 38,
+          "causal_frame_count": 6,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "e8f2c9cf23b5408abe72fd4313240539",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 38,
+          "causal_last_frame": 39,
+          "causal_frame_count": 2,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "8377abf77f464a9cb62eacf63f383422",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "201b7c65a61f4bc1a2333ea90ba9a932",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "848ac962547c4508b8f3b0fcc8d53270",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "91f797db8fb34ae5b32ba85eecae47c9",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "c68d42ec92594eaf94b5dcd20c3b8ba5",
+          "agent_class": "motorcycle",
+          "causal_first_frame": 3,
+          "causal_last_frame": 18,
+          "causal_frame_count": 16,
+          "labeled_by_count": 3
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "5eaff323af5b4df4b864dbd433aeb75c",
+      "split": "val",
+      "num_frames": 39,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "34efdf2320db497489da4472abdfdebb",
+          "agent_class": "truck",
+          "causal_first_frame": 0,
+          "causal_last_frame": 38,
+          "causal_frame_count": 39,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "4ff747dd2564439e8feea384de576cf2",
+          "agent_class": "truck",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "3927699fa562451a98bb13bf8405361d",
+      "split": "val",
+      "num_frames": 39,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "6ec090cd571944d89bc10450dc9743af",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 8,
+          "causal_frame_count": 9,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "9d1307e95c524ca4a51e03087bd57c29",
+      "split": "val",
+      "num_frames": 39,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 3,
+      "causal_agents": [
+        {
+          "instance_token": "488d2d8fcd104fffb4bea587fa465a88",
+          "agent_class": "truck",
+          "causal_first_frame": 0,
+          "causal_last_frame": 7,
+          "causal_frame_count": 8,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "7726b2abf5a64594a9c5410c7a1ab3be",
+          "agent_class": "truck",
+          "causal_first_frame": 0,
+          "causal_last_frame": 3,
+          "causal_frame_count": 4,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "0a8b9192e2e04ac9a4c8acddda98356e",
+          "agent_class": "car",
+          "causal_first_frame": 3,
+          "causal_last_frame": 11,
+          "causal_frame_count": 9,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "93608f0d57794ba6b014314c488e2b4a",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "2f62a21a59be416c9b6df054ddf8e3d8",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 11,
+          "causal_frame_count": 12,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "b962720ed52541c182407991760d1e9f",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 10,
+          "causal_frame_count": 11,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "6d872d1448814fd189e631b1187c3771",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "fcc020250f884397965ba00c1d9ad9e6",
+      "split": "val",
+      "num_frames": 39,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 4,
+      "causal_agents": [
+        {
+          "instance_token": "2dfb6288d4414753a1b1ef702a280335",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "0be8bc2c38d54fc19bb111cf93b0be9d",
+          "agent_class": "barrier",
+          "causal_first_frame": 15,
+          "causal_last_frame": 23,
+          "causal_frame_count": 9,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "7b0ca4dc7100425f86ec4754313c5fcb",
+          "agent_class": "barrier",
+          "causal_first_frame": 17,
+          "causal_last_frame": 32,
+          "causal_frame_count": 16,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "6d9d435afa5b470281038aa3478b217e",
+          "agent_class": "bus",
+          "causal_first_frame": 24,
+          "causal_last_frame": 30,
+          "causal_frame_count": 7,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "a499ee875da34e2b9655afb999edb8a9",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "b07358651c604e2d83da7c4d4755de73",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "91681e0299b64139b36503d0fb2be018",
+          "agent_class": "car",
+          "causal_first_frame": 33,
+          "causal_last_frame": 35,
+          "causal_frame_count": 3,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "26a6b03c8e2f4e6692f174a7074e54ff",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "53f87887816247b1916135b8a7876345",
+          "agent_class": "car",
+          "causal_first_frame": 6,
+          "causal_last_frame": 14,
+          "causal_frame_count": 9,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "4962cb207a824e57bd10a2af49354b16",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 4,
+      "causal_agents": [
+        {
+          "instance_token": "f86bca2126f04a1ca11c0929e3251508",
+          "agent_class": "car",
+          "causal_first_frame": 20,
+          "causal_last_frame": 24,
+          "causal_frame_count": 5,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "244f6a020bb74fa8a52a4750ebff1e59",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 22,
+          "causal_last_frame": 39,
+          "causal_frame_count": 18,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "2a5d7607b62a49b7a8bb4616639b4631",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 22,
+          "causal_last_frame": 39,
+          "causal_frame_count": 18,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "38a07710e45b4f6a845e934ea2f0dc83",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 22,
+          "causal_last_frame": 39,
+          "causal_frame_count": 18,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "2abb3f3517c64446a5768df5665da49d",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "d7bacba9119840f78f3c804134ceece0",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "6a24a80e2ea3493c81f5fdb9fe78c28a",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "793dfe2679fe426ab281ea628c26d02d",
+          "agent_class": "car",
+          "causal_first_frame": 28,
+          "causal_last_frame": 40,
+          "causal_frame_count": 13,
+          "labeled_by_count": 3
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "16e50a63b809463099cb4c378fe0641e",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 3,
+      "causal_agents": [
+        {
+          "instance_token": "8300fb2dc4554627a01ba8a3084325fe",
+          "agent_class": "bus",
+          "causal_first_frame": 0,
+          "causal_last_frame": 10,
+          "causal_frame_count": 11,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "8f7327b31d334c768455a9e22adbc6db",
+          "agent_class": "bus",
+          "causal_first_frame": 0,
+          "causal_last_frame": 10,
+          "causal_frame_count": 11,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "07e9396834cb433ea84ebaa6fa58195d",
+          "agent_class": "trailer",
+          "causal_first_frame": 32,
+          "causal_last_frame": 40,
+          "causal_frame_count": 9,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "6f83169d067343658251f72e1dd17dbc",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "f2541977a00a448db9b46a32187d9059",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "3363f396bb43405fbdd17d65dc123d4e",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "b94fbf78579f4ff5ab5dbd897d5e3199",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 3,
+      "causal_agents": [
+        {
+          "instance_token": "41c466dc7b324a2d996337dbc895a027",
+          "agent_class": "truck",
+          "causal_first_frame": 0,
+          "causal_last_frame": 3,
+          "causal_frame_count": 4,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "9927248e4c9f4804b9de3df200757285",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 39,
+          "causal_frame_count": 40,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "92d0a06f764c4dcca69fad8871ae48c2",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 35,
+          "causal_last_frame": 39,
+          "causal_frame_count": 5,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "3f90afe9f7dc49399347ae1626502aed",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "1252a8b955d946f48fdf6ec1197b2bd5",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 16,
+          "causal_frame_count": 17,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "dc61c9bbe30a458bb9ef0ae058917d55",
+          "agent_class": "bus",
+          "causal_first_frame": 0,
+          "causal_last_frame": 16,
+          "causal_frame_count": 17,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "952cb0bcd89b4ca4b904cdcbbf595523",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "9494dbd1ee47455fa232327f328ee212",
+          "agent_class": "bus",
+          "causal_first_frame": 0,
+          "causal_last_frame": 40,
+          "causal_frame_count": 31,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "0e7ede02718341558414865d5c604745",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "2f1063514ba54b078087e8cd94e76fa1",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 3,
+          "causal_last_frame": 10,
+          "causal_frame_count": 8,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "c3fa69a654dc4053954fed12a413d2da",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 3,
+          "causal_last_frame": 10,
+          "causal_frame_count": 8,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "44c9089913db4d4ab839a2fcb35989ed",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "ed242d80ccb34b139aaf9ab89859332e",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "30a1a4ccd60047b4a22ee3bf0645f3ad",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 26,
+      "causal_agents": [
+        {
+          "instance_token": "1169ef3e26224fdc92f8d6b23ef5b2f4",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "163b21c4b4324679ba83731366c74cd0",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "19150e29981c4f64ae30dc759ef88d93",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "1b363e5c8ab4416ab95c076223c390ff",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "2db8843449d049c2bfea926811d465a2",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "536bebc32d6a4dbe863cb2d91c264a91",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "60e3d77a88d54834b7286119c8afab8a",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "6e975445c87b43e9904d31c7a3224c08",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "72d9a1cf765b436eaca97c85a8be5234",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "77fbd4ce1baf4199bf9e31ba0876da40",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "79e764b347c64943966b730596070931",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "840c95d54aaa4d669b6faed3730d7510",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "8e16354924614d289f461533f58ce014",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "91eee3bd09994c1fa90ae0457b52c282",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "9db4e4c47fc347dd9cdd368ec00ac280",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "a4fcf32bf258454096b967427f479f85",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "a519d2b208a94060b9d99f304ae93970",
+          "agent_class": "truck",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "abe6a102099841618ab4ca0b237ec5d1",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "ba768638c02a4959b489001a08223ec0",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "be36d8940c404dc5ac473c89f38b097a",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "c09e358343274ab882956fbd65e1ff6b",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "ca872410da454ab586e51c24f4057769",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "cf184eae006b440dbb50d35437f8f85c",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "dc342ff3eb4e41709ce1b673dc6f2c2e",
+          "agent_class": "barrier",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "f827170650494060b0d964d623316992",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "a3ae9594d6ed4b6587d47f7832774e9e",
+          "agent_class": "truck",
+          "causal_first_frame": 29,
+          "causal_last_frame": 39,
+          "causal_frame_count": 11,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "8e3364691ee94c698458e0913a29af78",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "84e056bd8e994362a37cba45c0f75558",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "54f56f80350b4c07af598ee87cf3886a",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "e7d05ac2544848cf86e43b8ee64b8331",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 28,
+          "causal_last_frame": 39,
+          "causal_frame_count": 12,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "0ac05652a4c44374998be876ba5cd6fd",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "3ada261efee347cba2e7557794f1aec8",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "5301151d8b6a42b0b252e95634bd3995",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "991d65cab952449a821deb32e971ff19",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "8b9da00e9c0740c79a641796f3a38ff6",
+          "agent_class": "truck",
+          "causal_first_frame": 11,
+          "causal_last_frame": 23,
+          "causal_frame_count": 13,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "9068766ee9374872a380fe75fcfb299e",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "b789de07180846cc972118ee6d1fb027",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "9088db17416043e5880a53178bfa461c",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "7210f928860043b5a7e0d3dd4b3e80ff",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "6c42dd000178467ebcf393c316871ee1",
+          "agent_class": "trailer",
+          "causal_first_frame": 21,
+          "causal_last_frame": 39,
+          "causal_frame_count": 19,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "b7b1d1f9e7084b65ba07618291399157",
+          "agent_class": "truck",
+          "causal_first_frame": 21,
+          "causal_last_frame": 39,
+          "causal_frame_count": 19,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "7bd098ac88cb4221addd19202a7ea5de",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "1d5ebd56dab541ea8746f8a04d58af04",
+          "agent_class": "truck",
+          "causal_first_frame": 0,
+          "causal_last_frame": 39,
+          "causal_frame_count": 40,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "5a3d217a535543289ff8f4dd00a33ba3",
+          "agent_class": "trailer",
+          "causal_first_frame": 0,
+          "causal_last_frame": 39,
+          "causal_frame_count": 40,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "19d97841d6f64eba9f6eb9b6e8c257dc",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "3045ed93c2534ec2a5cabea89b186bd9",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "f5b29a1e09d04355adcd60ab72de006b",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "a0d701d6788d432b98d442330df18213",
+          "agent_class": "trailer",
+          "causal_first_frame": 0,
+          "causal_last_frame": 9,
+          "causal_frame_count": 10,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "e823ae1ef9874e81bb2ad247a502f261",
+          "agent_class": "truck",
+          "causal_first_frame": 0,
+          "causal_last_frame": 9,
+          "causal_frame_count": 10,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "aedcd3cf7c4a49d7a4a43ab7443a9eb1",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "70c3ebae645640f8834cd9ab9a465b93",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 39,
+          "causal_frame_count": 40,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "84ce5eac9438493ca0835d51712fbc59",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 39,
+          "causal_frame_count": 40,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "21a7ba093614493b83838b9656b3558d",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 3,
+      "causal_agents": [
+        {
+          "instance_token": "3f86832a492f419c8aae6aa10f0d3bc1",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 2,
+          "causal_last_frame": 40,
+          "causal_frame_count": 39,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "72693edaf8b442de98c6ca118a9dedf5",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 2,
+          "causal_last_frame": 40,
+          "causal_frame_count": 39,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "9a569bb6f70640259c0cccfcbee3ba4f",
+          "agent_class": "car",
+          "causal_first_frame": 2,
+          "causal_last_frame": 40,
+          "causal_frame_count": 39,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 2,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          },
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "96e5f1f0944946f391b4ef33ad623008",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 5,
+      "causal_agents": [
+        {
+          "instance_token": "70ded11528ac432ba82eac86cc1271ab",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 40,
+          "causal_frame_count": 41,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "759cee1e2c0e4c8f8357e395471caf6c",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 40,
+          "causal_frame_count": 41,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "f372ca22d1cf4f09b80a067e84ad0222",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 40,
+          "causal_frame_count": 41,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "3fe5d0c2577d4c888c26cc0057cea1aa",
+          "agent_class": "truck",
+          "causal_first_frame": 5,
+          "causal_last_frame": 10,
+          "causal_frame_count": 6,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "3e529c0edd5a4074a2a4e89093e4479a",
+          "agent_class": "car",
+          "causal_first_frame": 10,
+          "causal_last_frame": 13,
+          "causal_frame_count": 4,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "4bb9626f13184da7a67ba1b241c19558",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "ca6e45c25d954dc4af6e12dd7b23454d",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "47793b7014e74fa7a8cff2784c560ef1",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 29,
+          "causal_frame_count": 30,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "656bb27689dc4e9b8e4559e3f6a7e534",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "57dc3221a3d845b5ab17ff0f98ce336f",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "7061c08f7eec4495979a0cf68ab6bb79",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "a8467b1b995449dba1cb2c413da56f77",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 6,
+          "causal_last_frame": 16,
+          "causal_frame_count": 11,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "bfaa1816a5584a438688182babfbddac",
+          "agent_class": "car",
+          "causal_first_frame": 20,
+          "causal_last_frame": 39,
+          "causal_frame_count": 20,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "40209c4e465d4b4e8341ebd52be0d842",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "d10d0784f161465dba507c85fd4b9e38",
+          "agent_class": "bus",
+          "causal_first_frame": 0,
+          "causal_last_frame": 21,
+          "causal_frame_count": 22,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 2,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "keep"
+          },
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "50ff554b3ecb4d208849d042b7643715",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "905cfed4f0fc46679e8df8890cca4141",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "36f27b26ef4c423c9b79ac984dc33bae",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "f93b859bc15c4f808301b58eb505c455",
+          "agent_class": "car",
+          "causal_first_frame": 11,
+          "causal_last_frame": 18,
+          "causal_frame_count": 8,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "c5224b9b454b4ded9b5d2d2634bbda8a",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "f24b4682fbb9482aba149534deed1cc9",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "380ff00ec86447e3b986edc8e82ffba7",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "ec7b7459461e4da1a236ba23e22377c9",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "07aed9dae37340a997535ad99138e243",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "6741d407b1b44511853e5ec7aaee2992",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "c164a8e8e8b8489f964f711f472789be",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "d3b86ca0a17840109e9e049b3dd40037",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "dce6f3f2bf6b4859abcf3268581969d3",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "01e4fcbe6e49483293ce45727152b36e",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "d01e7279da2649ef896dc42f6b9ee7ab",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "7e8ff24069ff4023ac699669b2c920de",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "a7d073bc435b4356a0a9a5ebfb61f229",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 3,
+      "causal_agents": [
+        {
+          "instance_token": "9e206939b7c14a7e9aed1c125548feab",
+          "agent_class": "car",
+          "causal_first_frame": 20,
+          "causal_last_frame": 23,
+          "causal_frame_count": 4,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "a31b3ac3f0934e42b317a482e66fe3e4",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 31,
+          "causal_last_frame": 39,
+          "causal_frame_count": 9,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "b1eef3c7c0fe418bb30a7d85dda8d89e",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 31,
+          "causal_last_frame": 39,
+          "causal_frame_count": 9,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "85651af9c04945c3a394cf845cb480a6",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "d6f191274e09469caa9a462d9bc12f8d",
+          "agent_class": "car",
+          "causal_first_frame": 7,
+          "causal_last_frame": 10,
+          "causal_frame_count": 4,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 2,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          },
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "197a7e4d3de84e57af17b3d65fcb3893",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "a2b005c4dd654af48194ada18662c8ca",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "32ad35acf26b4b7b9c34f973e422e43e",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 24,
+          "causal_last_frame": 35,
+          "causal_frame_count": 12,
+          "labeled_by_count": 3
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "3a2d9bf6115f40898005d1c1df2b7282",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 9,
+      "causal_agents": [
+        {
+          "instance_token": "0dca3d6af8f54e3e93e324162edde063",
+          "agent_class": "truck",
+          "causal_first_frame": 22,
+          "causal_last_frame": 40,
+          "causal_frame_count": 19,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "27f41c64c4424be09c3ff0b1fbcd2eb8",
+          "agent_class": "trailer",
+          "causal_first_frame": 32,
+          "causal_last_frame": 40,
+          "causal_frame_count": 9,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "465f0a63ba874249893f764eb92208f6",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 35,
+          "causal_last_frame": 40,
+          "causal_frame_count": 6,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "6f716535d32349e987e9657c2fa6b6d5",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 35,
+          "causal_last_frame": 40,
+          "causal_frame_count": 6,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "70cd96c2d20641adafa8be0d88c82d4c",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 35,
+          "causal_last_frame": 40,
+          "causal_frame_count": 6,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "a569847cd0e2422594584ccc72e140af",
+          "agent_class": "car",
+          "causal_first_frame": 35,
+          "causal_last_frame": 40,
+          "causal_frame_count": 6,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "bf906dfeee124d76a8edd677834e79d4",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 35,
+          "causal_last_frame": 40,
+          "causal_frame_count": 6,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "c3fd976227a64cc2952df2262818b4a5",
+          "agent_class": "traffic_cone",
+          "causal_first_frame": 35,
+          "causal_last_frame": 40,
+          "causal_frame_count": 6,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "d63ceaddc3f94bdfa1a3418093c8aeec",
+          "agent_class": "car",
+          "causal_first_frame": 35,
+          "causal_last_frame": 40,
+          "causal_frame_count": 6,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "325cef682f064c55a255f2625c533b75",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "223096a415cc45bf8ecd4c3a42251fd7",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 4,
+      "causal_agents": [
+        {
+          "instance_token": "025c68f5f4d14568ae6356459b431434",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 16,
+          "causal_frame_count": 17,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "0a8d2c18149244e3b1f8a99c24747483",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 20,
+          "causal_frame_count": 21,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "24666ac5c59b47e899cb34c50cc9bfdb",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 9,
+          "causal_frame_count": 10,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "69c5fa88b67546699aa13153ec8d1504",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 18,
+          "causal_frame_count": 19,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "76ceedbcc6a54b158eba9945a160a7bc",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "955ff42a1990442d868cdfc0c01583d4",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "112ca771e318478a88cfa692f61ffcac",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 4,
+      "causal_agents": [
+        {
+          "instance_token": "616862af032e4c6aa73fb4da5a97d553",
+          "agent_class": "car",
+          "causal_first_frame": 21,
+          "causal_last_frame": 32,
+          "causal_frame_count": 12,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "423397e6745b45e599fde48dd07777cd",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 27,
+          "causal_last_frame": 40,
+          "causal_frame_count": 14,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "cf97d2c212f0427d90e37d8379598994",
+          "agent_class": "truck",
+          "causal_first_frame": 27,
+          "causal_last_frame": 40,
+          "causal_frame_count": 14,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "fc171de031f5467fa1983b82bfaf3187",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 27,
+          "causal_last_frame": 39,
+          "causal_frame_count": 13,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "04219bfdc9004ba2af16d3079ecc4353",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "2ab7d683584e4a5fbc5d3464284a9e38",
+          "agent_class": "bus",
+          "causal_first_frame": 11,
+          "causal_last_frame": 26,
+          "causal_frame_count": 16,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "ee48ee50025e40b4ae27dbdf84d92825",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "087bb99327cd49c5b9eba52bda1b000a",
+          "agent_class": "truck",
+          "causal_first_frame": 29,
+          "causal_last_frame": 35,
+          "causal_frame_count": 7,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "117e527ad1d14f34947a1656da4d539a",
+          "agent_class": "truck",
+          "causal_first_frame": 37,
+          "causal_last_frame": 39,
+          "causal_frame_count": 3,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "32185f91e68f4069ab3cdd2f4f1a4ff1",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "b4dad468258e4a0ea43d5fe0710c7437",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 0,
+          "causal_frame_count": 1,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "ee8e111f86fe4e8abe620e5abb19e4a7",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 1,
+          "causal_last_frame": 10,
+          "causal_frame_count": 10,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "696a45dbd11346b794fdce43fa0a1770",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "1a2b708d2e2240c987b17c823713fd24",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 9,
+          "causal_last_frame": 23,
+          "causal_frame_count": 15,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "2e27b76d1fc24e7bb130d8ff12ffb122",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 9,
+          "causal_last_frame": 23,
+          "causal_frame_count": 15,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "c4df079d260241ff8015218e29b42ea7",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "ed82a338e2e34b25bf21d84448d1f3d1",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 6,
+          "causal_frame_count": 7,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "5521cd85ed0e441f8d23938ed09099dd",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "e036014a715945aa965f4ec24e8639c9",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "055b50312c884d9fb0cb4d9f7391f017",
+          "agent_class": "car",
+          "causal_first_frame": 12,
+          "causal_last_frame": 26,
+          "causal_frame_count": 15,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "f053dbfb196049ad856d68f037709be6",
+          "agent_class": "motorcycle",
+          "causal_first_frame": 26,
+          "causal_last_frame": 34,
+          "causal_frame_count": 9,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "cb3e964697d448b3bc04a9bc06c9e131",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "a04daf2d0f194b2ab2ff2a47dfebc1d7",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "e60ef590e3614187b7800db3e5284e1a",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 6,
+            "name": "Sanghyun Choi",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "2086743226764f268fe8d4b0b7c19590",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "4efbf4c0b77f467385fc2e19da45c989",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "5926dc9e8fc8424db74d6f3dd5119942",
+          "agent_class": "truck",
+          "causal_first_frame": 31,
+          "causal_last_frame": 37,
+          "causal_frame_count": 7,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "c92fdd793fbb4401b12782a9b8d4a499",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 5,
+      "causal_agents": [
+        {
+          "instance_token": "6ddb0acd98e84f69bc92eaa3e42fbd2c",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 24,
+          "causal_frame_count": 25,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "9591b6d1b6fe4a9aaa7efcd2ee98e248",
+          "agent_class": "truck",
+          "causal_first_frame": 0,
+          "causal_last_frame": 24,
+          "causal_frame_count": 25,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "ac086ac43d224edabba56314c9ca86ec",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 24,
+          "causal_frame_count": 25,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "14b40ff3cc064816b0a677dfa83e34cf",
+          "agent_class": "car",
+          "causal_first_frame": 3,
+          "causal_last_frame": 10,
+          "causal_frame_count": 8,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "14ff4e9efbe947b1bd3eed938937970d",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 3,
+          "causal_last_frame": 17,
+          "causal_frame_count": 15,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "6776b91389394ff18e57b269863b4dbf",
+      "split": "val",
+      "num_frames": 41,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 2,
+      "causal_agents": [
+        {
+          "instance_token": "219bb4e620304555a2b18a73b4313786",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 7,
+          "causal_last_frame": 20,
+          "causal_frame_count": 14,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "7c6c0ea7f77c480e8f7eec687bc29bdb",
+          "agent_class": "motorcycle",
+          "causal_first_frame": 7,
+          "causal_last_frame": 20,
+          "causal_frame_count": 14,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "931c5c57011944459bba3825ab8777a9",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "aacd6706a091407fb1b0e5343d27da7e",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 3,
+      "causal_agents": [
+        {
+          "instance_token": "80d5b85f6cec4cd6803b43f1362101f3",
+          "agent_class": "car",
+          "causal_first_frame": 0,
+          "causal_last_frame": 36,
+          "causal_frame_count": 37,
+          "labeled_by_count": 2
+        },
+        {
+          "instance_token": "9bbf13fca2a24b98b505a94e2b75b3e7",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 10,
+          "causal_frame_count": 11,
+          "labeled_by_count": 1
+        },
+        {
+          "instance_token": "aed4c59145c44353825fd606baaec4fa",
+          "agent_class": "pedestrian",
+          "causal_first_frame": 0,
+          "causal_last_frame": 18,
+          "causal_frame_count": 19,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "64bfc5edd71147858ce7446892d7f864",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "e005041f659c47e194cd5b18ea6fc346",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "034dee1695304630b0692da8c1f153fc",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "0d875d40012c47249f3c32c4802a145e",
+          "agent_class": "car",
+          "causal_first_frame": 12,
+          "causal_last_frame": 36,
+          "causal_frame_count": 25,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "7052d21b95fc4bae8761b8d9524f3e42",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "e8099a6136804f3bb9b38ff94d98eb64",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "e6f1a7e6218a4737bfedc6af90926b3e",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "6af9b75e439e4811ad3b04dc2220657a",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 3,
+            "name": "Jaeha Song",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "f97bf749746c4c3a8ad9f1c11eab6444",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "bd338b912ce9434995b29b6dac9fbf1d",
+      "split": "val",
+      "num_frames": 40,
+      "keep": true,
+      "triage_status": "keep",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "0f5a4f326a2041e28d091bff8e91245c",
+          "agent_class": "car",
+          "causal_first_frame": 24,
+          "causal_last_frame": 34,
+          "causal_frame_count": 11,
+          "labeled_by_count": 2
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "keep"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "afbc2583cc324938b2e8931d42c83e6b",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "16be583c31a2403caa6c158bb55ae616",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "e8834785d9ff4783a5950281a4579943",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "d29527ec841045d18d04a933e7a0afd2",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 29,
+            "name": "Byounggun Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "85889db3628342a482c5c0255e5347e9",
+      "split": "val",
+      "num_frames": 41,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "0dae482684ce4cd69a7258f55bc98d73",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "82cabcf15a1a48aca6bbf082f8710e39",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 0,
+      "causal_agents": [],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 5,
+            "name": "Nayoung Kim",
+            "status": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "scene_token": "6498fce2f38645fc9bf9d4464b159230",
+      "split": "val",
+      "num_frames": 40,
+      "keep": false,
+      "triage_status": "ignore",
+      "causal_agent_count": 1,
+      "causal_agents": [
+        {
+          "instance_token": "bafe08a9f1374203b7feb65e43c4ad25",
+          "agent_class": "motorcycle",
+          "causal_first_frame": 7,
+          "causal_last_frame": 11,
+          "causal_frame_count": 5,
+          "labeled_by_count": 1
+        }
+      ],
+      "annotation_meta": {
+        "num_annotators": 1,
+        "triage": [
+          {
+            "profile_id": 7,
+            "name": "Geonyeong Park",
+            "status": "ignore"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -470,8 +470,15 @@ import torch.nn as nn
 
 from einops import rearrange
 
-from flash_attn.flash_attn_interface import flash_attn_varlen_qkvpacked_func
-from flash_attn.bert_padding import unpad_input, pad_input
+try:
+    from flash_attn.flash_attn_interface import flash_attn_varlen_qkvpacked_func
+    from flash_attn.bert_padding import unpad_input, pad_input
+    FLASH_ATTN_AVAILABLE = True
+except ImportError:
+    flash_attn_varlen_qkvpacked_func = None
+    unpad_input = None
+    pad_input = None
+    FLASH_ATTN_AVAILABLE = False
 
 
 class FlashAttention(nn.Module):
@@ -553,6 +560,8 @@ class Attention(nn.Module):
 
         self.use_flash_attn = use_flash_attn
         if use_flash_attn:
+            if not FLASH_ATTN_AVAILABLE:
+                raise ImportError("flash_attn is required when use_flash_attn=True. Set attn_implementation='eager' to use the PyTorch attention path.")
             self.causal = causal
             self.inner_attn = FlashAttention(attention_dropout=attn_drop)
 

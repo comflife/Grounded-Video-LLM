@@ -95,15 +95,44 @@ class FSDPStrategy(TrainingStrategy):
         self.fsdp_state_dict_type = state_dict_type
         self.fsdp_save_policy = FullStateDictConfig(offload_to_cpu=True, rank0_only=True)
 
+    def _checkpoint_path(self, run_dir: Path, resume: bool = False, epoch: Optional[int] = None) -> Path:
+        file_name = "_".join(self.trainable_module_keys)
+        if resume:
+            file_name = f"{file_name}_resume"
+        if epoch is not None:
+            file_name = f"{file_name}_epoch{epoch:02d}"
+        return Path(run_dir) / f"{self.args.stage}_{self.args.model}_{self.args.llm}_{self.args.dataset}_{file_name}.pth"
+
     def save_checkpoint(
         self,
         run_dir: Path,
         train_loss: Optional[float] = None,
         only_trainable: bool = True,
         resume: bool = False,
+        epoch: Optional[int] = None,
     ) -> None:
         """Save a checkpoint to the `run_dir` only containing the state_dicts for trainable parameters by default."""
         assert isinstance(self.vlm, FSDP), "FSDPStrategy.save_checkpoint assumes VLM is already wrapped in FSDP!"
+        checkpoint_path = self._checkpoint_path(run_dir, resume=resume, epoch=epoch)
+
+        if only_trainable:
+            model_state_dicts = {
+                mkey: OrderedDict() for mkey in self.trainable_module_keys
+            }
+            with FSDP.summon_full_params(self.vlm, recurse=True, writeback=False, rank0_only=True):
+                if overwatch.is_rank_zero():
+                    for key, param in self.vlm.module.named_parameters():
+                        if not param.requires_grad:
+                            continue
+                        key = key.replace("._fsdp_wrapped_module", "")
+                        for mkey in model_state_dicts:
+                            if key.startswith(mprefix := f"{mkey}."):
+                                model_state_dicts[mkey][key.removeprefix(mprefix)] = param.detach().cpu().clone()
+
+                    torch.save({"model": model_state_dicts}, checkpoint_path)
+                    overwatch.info(f"Saved checkpoint to {checkpoint_path}")
+            dist.barrier()
+            return
 
         # Summon Full State Dictionary =>> Reconstitute from Shards
         with FSDP.state_dict_type(self.vlm, self.fsdp_state_dict_type, self.fsdp_save_policy):
@@ -120,11 +149,9 @@ class FSDPStrategy(TrainingStrategy):
 
             # Save on rank zero *only*
             if overwatch.is_rank_zero():
-                # Save Checkpoint & Copy Latest to `latest-checkpoint.pt`
-                file_name = '_'.join(self.trainable_module_keys)
-                if resume:
-                    file_name = file_name + '_resume'
-                torch.save({"model": model_state_dicts}, f"{run_dir}/{self.args.stage}_{self.args.model}_{self.args.llm}_{self.args.dataset}_{file_name}.pth")
+                torch.save({"model": model_state_dicts}, checkpoint_path)
+                overwatch.info(f"Saved checkpoint to {checkpoint_path}")
+            dist.barrier()
 
     def run_setup(self, n_train_examples: int) -> None:
         # Iteratively Assemble FSDP Wrapping Policy by fetching the wrapping policies for each backbone/constituent
@@ -149,6 +176,14 @@ class FSDPStrategy(TrainingStrategy):
                 param_dtype=torch.float32, reduce_dtype=torch.float32, buffer_dtype=torch.float32
             )
 
+        ignored_modules = []
+        if getattr(self.args, "stage", None) in ["grounded", "sft"]:
+            # These towers are frozen for grounded/SFT training. Keeping them out of FSDP avoids
+            # PyTorch writeback shape checks on InternVideo broadcast parameters.
+            ignored_modules = [self.vlm.vision_tower, self.vlm.video_encoder]
+            for module in ignored_modules:
+                module.to(torch.cuda.current_device())
+
         # <FSDP> => note that FSDP will automatically take care of device placement (similar to `autocast`)
         self.vlm = FSDP(
             self.vlm,
@@ -156,6 +191,7 @@ class FSDPStrategy(TrainingStrategy):
             mixed_precision=fsdp_precision_policy,
             sharding_strategy=self.fsdp_sharding_strategy,
             device_id=torch.cuda.current_device(),
+            ignored_modules=ignored_modules,
             limit_all_gathers=True,
             use_orig_params=True,
             forward_prefetch=False,
@@ -278,5 +314,3 @@ class FSDPStrategy(TrainingStrategy):
     def clip_grad_norm(self) -> None:
         # Note =>> FSDP uses a custom `clip_grad_norm_` function; requires *uniform grad dtype*
         self.vlm.clip_grad_norm_(max_norm=self.max_grad_norm)
-
-

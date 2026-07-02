@@ -1,5 +1,15 @@
 scripts/update.sh
 
+# Local experiment artifacts (data/weights live under /data)
+grounding_exp/
+nuscenes_grounded_videos/
+experiments/
+weight_path/
+*.pth
+*.mp4
+*.jpg
+!model.png
+
 # 忽略所有 __pycache__ 目录
 */__pycache__/
 */*/__pycache__/

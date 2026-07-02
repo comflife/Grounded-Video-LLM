@@ -12,6 +12,7 @@ from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import Callable, Optional
 
+import json
 import torch
 import torch.distributed as dist
 from torch.utils.data import DataLoader, Dataset, DistributedSampler
@@ -93,6 +94,8 @@ class TrainingStrategy(ABC):
         run_dir: Path,
         train_loss: Optional[float] = None,
         only_trainable: bool = True,
+        resume: bool = False,
+        epoch: Optional[int] = None,
     ) -> None: ...
 
     @abstractmethod
@@ -226,6 +229,9 @@ class TrainingStrategy(ABC):
             self.epochs = 100
 
         iteration_loss_list = []
+        loss_log_path = Path(self.args.save_dir) / "train_loss.jsonl"
+        if overwatch.is_rank_zero() and loss_log_path.exists():
+            loss_log_path.unlink()
         # iteration_lr_list = [[] for i in range(len(self.optimizer.param_groups))]
 
         # === Train ===
@@ -316,8 +322,35 @@ class TrainingStrategy(ABC):
                         self.lr_scheduler.step()
                         self.optimizer.zero_grad()
 
-                        iteration_loss_list.append(self.reduce_metric(iteration_loss))
+                        step_loss = self.reduce_metric(iteration_loss)
+                        iteration_loss_list.append(step_loss)
                         iteration_loss = 0
+                        global_step = gone_steps + len(iteration_loss_list)
+                        lr = self.lr_scheduler.get_last_lr()[0]
+
+                        if overwatch.is_rank_zero():
+                            overwatch.info(
+                                f"Epoch {epoch + 1}/{self.epochs} | Step {global_step} | "
+                                f"Loss {step_loss:.4f} | LR {lr:.2e}"
+                            )
+                            progress.set_postfix(
+                                loss=f"{step_loss:.4f}",
+                                lr=f"{lr:.2e}",
+                                epoch=f"{epoch + 1}/{self.epochs}",
+                                refresh=False,
+                            )
+                            with open(loss_log_path, "a", encoding="utf-8") as loss_log:
+                                loss_log.write(
+                                    json.dumps(
+                                        {
+                                            "epoch": epoch + 1,
+                                            "global_step": global_step,
+                                            "loss": step_loss,
+                                            "lr": lr,
+                                        }
+                                    )
+                                    + "\n"
+                                )
                         # for i in range(len(iteration_lr_list)):
                         #     iteration_lr_list[i].append(self.optimizer.param_groups[i]['lr'])
 
@@ -336,7 +369,7 @@ class TrainingStrategy(ABC):
                         progress.update()
                         # progress.set_description(status)
 
-                    plot_interval = int(steps_per_epoch*self.grad_accumulation_steps/100)
+                    plot_interval = max(1, int(steps_per_epoch*self.grad_accumulation_steps/100))
                     if (train_idx + 1) % plot_interval == 0:
                         if overwatch.is_rank_zero():
                             self.plot_records(iteration_loss_list, f'{self.args.model}_{self.args.llm}_{self.args.stage}_{self.args.dataset}_loss')
@@ -354,7 +387,14 @@ class TrainingStrategy(ABC):
                     #         dataloader=dataloader, curr_epoch=epoch
                     #     )
 
-            # Save checkpoint at end each epoch (if `self.max_steps` is None)
+            # Save checkpoint at end of each epoch (if `self.max_steps` is None)
             if self.max_steps is None:
-                # self.save_checkpoint(metrics.run_dir, metrics.global_step, epoch, loss.item())
+                if overwatch.is_rank_zero() and iteration_loss_list:
+                    epoch_losses = iteration_loss_list[-steps_per_epoch:]
+                    epoch_loss = sum(epoch_losses) / len(epoch_losses)
+                    overwatch.info(
+                        f"Finished epoch {epoch + 1}/{self.epochs} | "
+                        f"Avg loss {epoch_loss:.4f} | Steps this epoch {len(epoch_losses)}"
+                    )
+                self.save_checkpoint(run_dir=self.args.save_dir, epoch=epoch + 1)
                 dist.barrier()

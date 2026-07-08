@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 AGENT_SECONDS_RE = re.compile(
-    r"(?P<class>[a-zA-Z0-9_]+)\s*:\s*from\s*<\s*(?P<start>-?\d+(?:\.\d+)?)\s*>\s*to\s*<\s*(?P<end>-?\d+(?:\.\d+)?)\s*>\s*seconds?",
+    r"(?P<class>[a-zA-Z0-9_]+)\s*:\s*from\s*<\s*(?P<start>-?\d+(?:\.\d+)?)\s*>\s*to\s*<\s*(?P<end>-?\d+(?:\.\d+)?)\s*>(?:\s*seconds?)?",
     re.IGNORECASE,
 )
 AGENT_FRAME_RE = re.compile(

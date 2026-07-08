@@ -63,6 +63,12 @@ def parse_args():
         "--ckpt_path",
         type=str,
         default="/data/byounggun/grounding_exp/checkpoints/nuscenes_phi35_scene_agents_t40_ep5/sft_llava_next_video_phi3.5_mix_grounded_multi_modal_projector_video_projecter_language_model.pth",
+        help="Trainable checkpoint to load. Use an empty string with --skip_ckpt_load to evaluate only the base separated weights.",
+    )
+    parser.add_argument(
+        "--skip_ckpt_load",
+        action="store_true",
+        help="Skip loading --ckpt_path and evaluate the base model weights as initialized from pretrained_vision_proj_llm_path.",
     )
     parser.add_argument(
         "--config_path",
@@ -282,7 +288,10 @@ def main():
         pretrained_video_path=args.pretrained_video_path,
         pretrained_vision_proj_llm_path=args.pretrained_vision_proj_llm_path,
     )
-    load_report = load_trainable_checkpoint(model, args.ckpt_path)
+    if args.skip_ckpt_load or not args.ckpt_path:
+        load_report = {"skipped": True}
+    else:
+        load_report = load_trainable_checkpoint(model, args.ckpt_path)
     model.eval()
     model.to(args.device)
 
@@ -305,7 +314,10 @@ def main():
         output_jsonl.unlink()
 
     results = []
-    print(f"Loaded checkpoint: {args.ckpt_path}")
+    if load_report.get("skipped"):
+        print("Skipped trainable checkpoint loading; evaluating base separated weights.")
+    else:
+        print(f"Loaded checkpoint: {args.ckpt_path}")
     print(f"Checkpoint load report: {load_report}")
     print(f"Running eval on {len(eval_items)} annotations from {len(grouped_items)} videos")
     print(f"Writing JSONL to {output_jsonl}")

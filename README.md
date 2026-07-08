@@ -16,33 +16,6 @@ The repo path below is a symlink to the same location and is gitignored:
 
 `nuscenes_grounded_videos` is also a local symlink and is gitignored.
 
-## Data Layout
-
-Main refined eval data:
-
-```bash
-/data/byounggun/grounding_exp/nuscenes_causal_agents_refined/eval_grounded/eval_grounded.json
-```
-
-Main refined train data:
-
-```bash
-/data/byounggun/grounding_exp/nuscenes_causal_agents_refined/mix_grounded/mix_grounded.json
-```
-
-CoT eval prompt data:
-
-```bash
-/data/byounggun/grounding_exp/nuscenes_causal_agents_refined/eval_grounded/eval_grounded_cot_prompt.json
-```
-
-Older/raw prepared data:
-
-```bash
-/data/byounggun/grounding_exp/nuscenes_causal_agents
-/data/byounggun/grounding_exp/nuscenes_causal_agents_separate
-```
-
 ## Finetune Grounded-VideoLLM
 
 Default finetuning command:

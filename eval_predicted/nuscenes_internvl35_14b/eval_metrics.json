@@ -1,0 +1,620 @@
+{
+  "metadata": {
+    "predictions": "/data/byounggun/grounding_exp/eval_results/nuscenes_internvl35_14b/eval_predictions.json",
+    "matching": "one-to-one greedy frame IoU with agent_class match"
+  },
+  "metrics": {
+    "all": {
+      "records": 56,
+      "gt_agents": 96,
+      "pred_agents": 93,
+      "no_prediction_records": 32,
+      "record_miou": 0.1182768609494506,
+      "pooled_agent_miou": 0.12418289444971085,
+      "r1_at_0_3": 0.19642857142857142,
+      "r1_at_0_5": 0.05357142857142857,
+      "r1_at_0_7": 0.0,
+      "per_record": [
+        {
+          "question_id": "scene-0003_scene_agents",
+          "video_id": "scene-0003",
+          "gt_agent_count": 3,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0014_scene_agents",
+          "video_id": "scene-0014",
+          "gt_agent_count": 1,
+          "pred_agent_count": 1,
+          "miou": 0.5620253164556962,
+          "matched_ious": [
+            0.5620253164556962
+          ]
+        },
+        {
+          "question_id": "scene-0016_scene_agents",
+          "video_id": "scene-0016",
+          "gt_agent_count": 3,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0017_scene_agents",
+          "video_id": "scene-0017",
+          "gt_agent_count": 1,
+          "pred_agent_count": 4,
+          "miou": 0.08241758241758242,
+          "matched_ious": [
+            0.08241758241758242
+          ]
+        },
+        {
+          "question_id": "scene-0035_scene_agents",
+          "video_id": "scene-0035",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0038_scene_agents",
+          "video_id": "scene-0038",
+          "gt_agent_count": 2,
+          "pred_agent_count": 3,
+          "miou": 0.2647058823529412,
+          "matched_ious": [
+            0.0,
+            0.5294117647058824
+          ]
+        },
+        {
+          "question_id": "scene-0092_scene_agents",
+          "video_id": "scene-0092",
+          "gt_agent_count": 3,
+          "pred_agent_count": 3,
+          "miou": 0.15701024713682943,
+          "matched_ious": [
+            0.02531645569620253,
+            0.44571428571428573,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0096_scene_agents",
+          "video_id": "scene-0096",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0099_scene_agents",
+          "video_id": "scene-0099",
+          "gt_agent_count": 1,
+          "pred_agent_count": 4,
+          "miou": 0.40153452685422,
+          "matched_ious": [
+            0.40153452685422
+          ]
+        },
+        {
+          "question_id": "scene-0103_scene_agents",
+          "video_id": "scene-0103",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0108_scene_agents",
+          "video_id": "scene-0108",
+          "gt_agent_count": 4,
+          "pred_agent_count": 3,
+          "miou": 0.37231742940603696,
+          "matched_ious": [
+            0.6923076923076923,
+            0.0,
+            0.43797468354430374,
+            0.3589873417721519
+          ]
+        },
+        {
+          "question_id": "scene-0110_scene_agents",
+          "video_id": "scene-0110",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0221_scene_agents",
+          "video_id": "scene-0221",
+          "gt_agent_count": 1,
+          "pred_agent_count": 3,
+          "miou": 0.3076923076923077,
+          "matched_ious": [
+            0.3076923076923077
+          ]
+        },
+        {
+          "question_id": "scene-0271_scene_agents",
+          "video_id": "scene-0271",
+          "gt_agent_count": 2,
+          "pred_agent_count": 4,
+          "miou": 0.6718555417185554,
+          "matched_ious": [
+            0.7272727272727273,
+            0.6164383561643836
+          ]
+        },
+        {
+          "question_id": "scene-0273_scene_agents",
+          "video_id": "scene-0273",
+          "gt_agent_count": 2,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0274_scene_agents",
+          "video_id": "scene-0274",
+          "gt_agent_count": 2,
+          "pred_agent_count": 20,
+          "miou": 0.06795366795366801,
+          "matched_ious": [
+            0.13590733590733603,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0278_scene_agents",
+          "video_id": "scene-0278",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0329_scene_agents",
+          "video_id": "scene-0329",
+          "gt_agent_count": 1,
+          "pred_agent_count": 2,
+          "miou": 0.5115089514066496,
+          "matched_ious": [
+            0.5115089514066496
+          ]
+        },
+        {
+          "question_id": "scene-0330_scene_agents",
+          "video_id": "scene-0330",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0332_scene_agents",
+          "video_id": "scene-0332",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0520_scene_agents",
+          "video_id": "scene-0520",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0521_scene_agents",
+          "video_id": "scene-0521",
+          "gt_agent_count": 2,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0524_scene_agents",
+          "video_id": "scene-0524",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0552_scene_agents",
+          "video_id": "scene-0552",
+          "gt_agent_count": 2,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0556_scene_agents",
+          "video_id": "scene-0556",
+          "gt_agent_count": 3,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0562_scene_agents",
+          "video_id": "scene-0562",
+          "gt_agent_count": 5,
+          "pred_agent_count": 5,
+          "miou": 0.004987531172069825,
+          "matched_ious": [
+            0.0,
+            0.024937655860349125,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0565_scene_agents",
+          "video_id": "scene-0565",
+          "gt_agent_count": 1,
+          "pred_agent_count": 4,
+          "miou": 0.06666666666666667,
+          "matched_ious": [
+            0.06666666666666667
+          ]
+        },
+        {
+          "question_id": "scene-0634_scene_agents",
+          "video_id": "scene-0634",
+          "gt_agent_count": 2,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0635_scene_agents",
+          "video_id": "scene-0635",
+          "gt_agent_count": 2,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0638_scene_agents",
+          "video_id": "scene-0638",
+          "gt_agent_count": 2,
+          "pred_agent_count": 7,
+          "miou": 0.3061224489795918,
+          "matched_ious": [
+            0.0,
+            0.6122448979591836
+          ]
+        },
+        {
+          "question_id": "scene-0770_scene_agents",
+          "video_id": "scene-0770",
+          "gt_agent_count": 2,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0771_scene_agents",
+          "video_id": "scene-0771",
+          "gt_agent_count": 2,
+          "pred_agent_count": 1,
+          "miou": 0.47794117647058826,
+          "matched_ious": [
+            0.9558823529411765,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0775_scene_agents",
+          "video_id": "scene-0775",
+          "gt_agent_count": 3,
+          "pred_agent_count": 7,
+          "miou": 0.1853228470875529,
+          "matched_ious": [
+            0.196078431372549,
+            0.0,
+            0.3598901098901098
+          ]
+        },
+        {
+          "question_id": "scene-0778_scene_agents",
+          "video_id": "scene-0778",
+          "gt_agent_count": 1,
+          "pred_agent_count": 1,
+          "miou": 0.014427860696517457,
+          "matched_ious": [
+            0.014427860696517457
+          ]
+        },
+        {
+          "question_id": "scene-0782_scene_agents",
+          "video_id": "scene-0782",
+          "gt_agent_count": 2,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0783_scene_agents",
+          "video_id": "scene-0783",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0795_scene_agents",
+          "video_id": "scene-0795",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0910_scene_agents",
+          "video_id": "scene-0910",
+          "gt_agent_count": 2,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0911_scene_agents",
+          "video_id": "scene-0911",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0914_scene_agents",
+          "video_id": "scene-0914",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0915_scene_agents",
+          "video_id": "scene-0915",
+          "gt_agent_count": 4,
+          "pred_agent_count": 4,
+          "miou": 0.2905266015200868,
+          "matched_ious": [
+            0.0,
+            0.9666666666666666,
+            0.19543973941368076,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0917_scene_agents",
+          "video_id": "scene-0917",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0921_scene_agents",
+          "video_id": "scene-0921",
+          "gt_agent_count": 3,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0922_scene_agents",
+          "video_id": "scene-0922",
+          "gt_agent_count": 1,
+          "pred_agent_count": 2,
+          "miou": 0.3578947368421053,
+          "matched_ious": [
+            0.3578947368421053
+          ]
+        },
+        {
+          "question_id": "scene-0923_scene_agents",
+          "video_id": "scene-0923",
+          "gt_agent_count": 1,
+          "pred_agent_count": 4,
+          "miou": 0.21739130434782614,
+          "matched_ious": [
+            0.21739130434782614
+          ]
+        },
+        {
+          "question_id": "scene-0924_scene_agents",
+          "video_id": "scene-0924",
+          "gt_agent_count": 2,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0925_scene_agents",
+          "video_id": "scene-0925",
+          "gt_agent_count": 1,
+          "pred_agent_count": 2,
+          "miou": 0.28806584362139925,
+          "matched_ious": [
+            0.28806584362139925
+          ]
+        },
+        {
+          "question_id": "scene-0926_scene_agents",
+          "video_id": "scene-0926",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0928_scene_agents",
+          "video_id": "scene-0928",
+          "gt_agent_count": 2,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0963_scene_agents",
+          "video_id": "scene-0963",
+          "gt_agent_count": 1,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0966_scene_agents",
+          "video_id": "scene-0966",
+          "gt_agent_count": 3,
+          "pred_agent_count": 5,
+          "miou": 0.40816326530612246,
+          "matched_ious": [
+            0.40816326530612246,
+            0.8163265306122449,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0967_scene_agents",
+          "video_id": "scene-0967",
+          "gt_agent_count": 2,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0969_scene_agents",
+          "video_id": "scene-0969",
+          "gt_agent_count": 2,
+          "pred_agent_count": 0,
+          "miou": 0.0,
+          "matched_ious": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "question_id": "scene-0971_scene_agents",
+          "video_id": "scene-0971",
+          "gt_agent_count": 0,
+          "pred_agent_count": 2,
+          "miou": 0.0,
+          "matched_ious": []
+        },
+        {
+          "question_id": "scene-1059_scene_agents",
+          "video_id": "scene-1059",
+          "gt_agent_count": 1,
+          "pred_agent_count": 1,
+          "miou": 0.24,
+          "matched_ious": [
+            0.24
+          ]
+        },
+        {
+          "question_id": "scene-1065_scene_agents",
+          "video_id": "scene-1065",
+          "gt_agent_count": 1,
+          "pred_agent_count": 1,
+          "miou": 0.3669724770642202,
+          "matched_ious": [
+            0.3669724770642202
+          ]
+        }
+      ]
+    }
+  }
+}

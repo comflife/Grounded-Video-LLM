@@ -1,0 +1,660 @@
+{
+  "metadata": {
+    "eval_json": "/data/byounggun/grounding_exp/nuscenes_causal_agents_refined/eval_grounded/eval_grounded.json",
+    "data_dir": "/data/byounggun/grounding_exp/nuscenes_causal_agents_refined",
+    "ckpt_path": "/data/byounggun/grounding_exp/weights/ckpt/sft_llava_next_video_phi3.5_mix_sft_multi_modal_projector_video_projecter_language_model.pth",
+    "num_annotations": 56,
+    "num_videos": 56,
+    "num_frames": 96,
+    "num_segs": 12,
+    "num_temporal_tokens": 40,
+    "resize_mode": "squash",
+    "shard_id": 0,
+    "num_shards": 1,
+    "offset": 0,
+    "generate_kwargs": {
+      "do_sample": false,
+      "num_beams": 1,
+      "max_new_tokens": 512,
+      "temperature": 0.2,
+      "top_p": null
+    },
+    "checkpoint_load_report": {
+      "multi_modal_projector": {
+        "missing": 0,
+        "unexpected": 0
+      },
+      "video_projecter": {
+        "missing": 0,
+        "unexpected": 0
+      },
+      "language_model": {
+        "missing": 3,
+        "unexpected": 0,
+        "partial_vocab_keys": [
+          "base_model.model.model.embed_tokens.weight",
+          "base_model.model.lm_head.weight",
+          "base_model.model.lm_head.bias"
+        ]
+      }
+    }
+  },
+  "results": [
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0003",
+      "video_file": "videos/scene-0003_front_left_front_front_right.mp4",
+      "question_id": "scene-0003_scene_agents",
+      "duration": 19.75009220822236,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <0.00> to <14.00> seconds; pedestrian: from <4.50> to <19.25> seconds; traffic_cone: from <5.50> to <14.00> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<7.90>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0014",
+      "video_file": "videos/scene-0014_front_left_front_front_right.mp4",
+      "question_id": "scene-0014_scene_agents",
+      "duration": 19.750053201730832,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: bus: from <0.00> to <11.10> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<7.90>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0016",
+      "video_file": "videos/scene-0016_front_left_front_front_right.mp4",
+      "question_id": "scene-0016_scene_agents",
+      "duration": 19.997820237594105,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: pedestrian: from <0.00> to <1.00> seconds; car: from <8.40> to <12.90> seconds; car: from <13.40> to <20.00> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0017",
+      "video_file": "videos/scene-0017_front_left_front_front_right.mp4",
+      "question_id": "scene-0017_scene_agents",
+      "duration": 19.749526628533623,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: pedestrian: from <1.55> to <19.75> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<7.90>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0035",
+      "video_file": "videos/scene-0035_front_left_front_front_right.mp4",
+      "question_id": "scene-0035_scene_agents",
+      "duration": 19.700328453701363,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <11.95> to <16.75> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<7.88>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0038",
+      "video_file": "videos/scene-0038_front_left_front_front_right.mp4",
+      "question_id": "scene-0038_scene_agents",
+      "duration": 20.000050000125,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: truck: from <1.00> to <5.00> seconds; truck: from <6.50> to <14.50> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0092",
+      "video_file": "videos/scene-0092_front_left_front_front_right.mp4",
+      "question_id": "scene-0092_scene_agents",
+      "duration": 19.750053201730832,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <0.00> to <0.50> seconds; pedestrian: from <13.35> to <17.25> seconds; pedestrian: from <17.75> to <19.75> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<7.90>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0096",
+      "video_file": "videos/scene-0096_front_left_front_front_right.mp4",
+      "question_id": "scene-0096_scene_agents",
+      "duration": 19.59969384275527,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: bicycle: from <0.00> to <10.15> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<7.84>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0099",
+      "video_file": "videos/scene-0099_front_left_front_front_right.mp4",
+      "question_id": "scene-0099_scene_agents",
+      "duration": 19.552233792408465,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <1.05> to <8.90> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<7.82>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0103",
+      "video_file": "videos/scene-0103_front_left_front_front_right.mp4",
+      "question_id": "scene-0103_scene_agents",
+      "duration": 19.900517313987578,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <5.00> to <13.40> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<7.96>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0108",
+      "video_file": "videos/scene-0108_front_left_front_front_right.mp4",
+      "question_id": "scene-0108_scene_agents",
+      "duration": 19.750115462213472,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: traffic_cone: from <0.50> to <6.50> seconds; truck: from <0.50> to <6.50> seconds; car: from <5.95> to <14.60> seconds; construction_vehicle: from <10.11> to <17.20> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<7.90>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0110",
+      "video_file": "videos/scene-0110_front_left_front_front_right.mp4",
+      "question_id": "scene-0110_scene_agents",
+      "duration": 19.84850627584958,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <5.40> to <9.40> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<7.94>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0221",
+      "video_file": "videos/scene-0221_front_left_front_front_right.mp4",
+      "question_id": "scene-0221_scene_agents",
+      "duration": 19.600304558578525,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: pedestrian: from <0.00> to <9.10> seconds.",
+      "prediction_raw": "pedestrian: From<0> to.",
+      "prediction_seconds": "pedestrian: From<0.00> to."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0271",
+      "video_file": "videos/scene-0271_front_left_front_front_right.mp4",
+      "question_id": "scene-0271_scene_agents",
+      "duration": 19.599132411738573,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <0.00> to <5.50> seconds; car: from <10.60> to <19.60> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<7.84>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0273",
+      "video_file": "videos/scene-0273_front_left_front_front_right.mp4",
+      "question_id": "scene-0273_scene_agents",
+      "duration": 19.99894364546867,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <0.00> to <11.75> seconds; pedestrian: from <0.00> to <11.75> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0274",
+      "video_file": "videos/scene-0274_front_left_front_front_right.mp4",
+      "question_id": "scene-0274_scene_agents",
+      "duration": 19.851293957011787,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: pedestrian: from <6.90> to <19.85> seconds; traffic_cone: from <16.15> to <19.35> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<7.94>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0278",
+      "video_file": "videos/scene-0278_front_left_front_front_right.mp4",
+      "question_id": "scene-0278_scene_agents",
+      "duration": 20.000570016326897,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: motorcycle: from <1.50> to <9.40> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0329",
+      "video_file": "videos/scene-0329_front_left_front_front_right.mp4",
+      "question_id": "scene-0329_scene_agents",
+      "duration": 19.550185325731153,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: truck: from <0.00> to <19.55> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<7.82>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0330",
+      "video_file": "videos/scene-0330_front_left_front_front_right.mp4",
+      "question_id": "scene-0330_scene_agents",
+      "duration": 19.5023402808337,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: pedestrian: from <0.00> to <4.45> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<7.80>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0332",
+      "video_file": "videos/scene-0332_front_left_front_front_right.mp4",
+      "question_id": "scene-0332_scene_agents",
+      "duration": 20.001140064983705,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: pedestrian: from <0.00> to <6.15> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0520",
+      "video_file": "videos/scene-0520_front_left_front_front_right.mp4",
+      "question_id": "scene-0520_scene_agents",
+      "duration": 20.249373504184902,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <2.95> to <7.45> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.10>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0521",
+      "video_file": "videos/scene-0521_front_left_front_front_right.mp4",
+      "question_id": "scene-0521_scene_agents",
+      "duration": 20.000030000075,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <9.95> to <12.50> seconds; pedestrian: from <10.95> to <20.00> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0524",
+      "video_file": "videos/scene-0524_front_left_front_front_right.mp4",
+      "question_id": "scene-0524_scene_agents",
+      "duration": 20.250503669518558,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <13.95> to <20.25> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.10>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0552",
+      "video_file": "videos/scene-0552_front_left_front_front_right.mp4",
+      "question_id": "scene-0552_scene_agents",
+      "duration": 20.348394286293182,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: bus: from <0.00> to <5.40> seconds; trailer: from <15.90> to <20.35> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.14>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0556",
+      "video_file": "videos/scene-0556_front_left_front_front_right.mp4",
+      "question_id": "scene-0556_scene_agents",
+      "duration": 19.949169516073045,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: truck: from <0.00> to <2.10> seconds; car: from <0.00> to <19.95> seconds; pedestrian: from <17.50> to <19.95> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<7.98>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0562",
+      "video_file": "videos/scene-0562_front_left_front_front_right.mp4",
+      "question_id": "scene-0562_scene_agents",
+      "duration": 20.049261034361425,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: barrier: from <0.00> to <0.50> seconds; car: from <0.00> to <0.50> seconds; traffic_cone: from <0.00> to <0.50> seconds; truck: from <0.00> to <0.50> seconds; truck: from <14.55> to <20.05> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.02>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0565",
+      "video_file": "videos/scene-0565_front_left_front_front_right.mp4",
+      "question_id": "scene-0565_scene_agents",
+      "duration": 19.999470014003858,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: pedestrian: from <14.00> to <20.00> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0634",
+      "video_file": "videos/scene-0634_front_left_front_front_right.mp4",
+      "question_id": "scene-0634_scene_agents",
+      "duration": 20.050909258607604,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: trailer: from <10.55> to <20.05> seconds; truck: from <10.55> to <20.05> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.02>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0635",
+      "video_file": "videos/scene-0635_front_left_front_front_right.mp4",
+      "question_id": "scene-0635_scene_agents",
+      "duration": 20.149864618097098,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: trailer: from <0.00> to <20.15> seconds; truck: from <0.00> to <20.15> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.06>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0638",
+      "video_file": "videos/scene-0638_front_left_front_front_right.mp4",
+      "question_id": "scene-0638_scene_agents",
+      "duration": 20.300295839677176,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: trailer: from <0.00> to <4.90> seconds; truck: from <0.00> to <4.90> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.\npedestrian: From<16> to<33>.\npedestrian: From<33> to<39>.\npedestrian: From<39> to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: < < 2.  \n 2 2.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.12>.\npedestrian: From<8.12> to<16.75>.\npedestrian: From<16.75> to<19.79>.\npedestrian: From<19.79> to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: From to.\npedestrian: < < 2.  \n 2 2."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0770",
+      "video_file": "videos/scene-0770_front_left_front_front_right.mp4",
+      "question_id": "scene-0770_scene_agents",
+      "duration": 20.00006000018,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <0.00> to <20.00> seconds; pedestrian: from <0.00> to <20.00> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0771",
+      "video_file": "videos/scene-0771_front_left_front_front_right.mp4",
+      "question_id": "scene-0771_scene_agents",
+      "duration": 20.400933069016855,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <0.90> to <20.40> seconds; pedestrian: from <0.90> to <20.40> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.16>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0775",
+      "video_file": "videos/scene-0775_front_left_front_front_right.mp4",
+      "question_id": "scene-0775_scene_agents",
+      "duration": 20.39983680130559,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <0.00> to <20.40> seconds; pedestrian: from <0.00> to <20.40> seconds; truck: from <2.40> to <5.35> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.16>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0778",
+      "video_file": "videos/scene-0778_front_left_front_front_right.mp4",
+      "question_id": "scene-0778_scene_agents",
+      "duration": 20.09680631602429,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <0.00> to <15.15> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.04>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0782",
+      "video_file": "videos/scene-0782_front_left_front_front_right.mp4",
+      "question_id": "scene-0782_scene_agents",
+      "duration": 20.398192620589338,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: pedestrian: from <2.90> to <8.50> seconds; car: from <9.90> to <19.90> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.16>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0783",
+      "video_file": "videos/scene-0783_front_left_front_front_right.mp4",
+      "question_id": "scene-0783_scene_agents",
+      "duration": 20.350293069067614,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: bus: from <0.00> to <11.00> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.14>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0795",
+      "video_file": "videos/scene-0795_front_left_front_front_right.mp4",
+      "question_id": "scene-0795_scene_agents",
+      "duration": 20.04979366187799,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <5.50> to <9.55> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.02>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0910",
+      "video_file": "videos/scene-0910_front_left_front_front_right.mp4",
+      "question_id": "scene-0910_scene_agents",
+      "duration": 19.998360134468975,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <10.00> to <12.00> seconds; pedestrian: from <15.50> to <20.00> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0911",
+      "video_file": "videos/scene-0911_front_left_front_front_right.mp4",
+      "question_id": "scene-0911_scene_agents",
+      "duration": 20.00002000002,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <3.45> to <5.45> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0914",
+      "video_file": "videos/scene-0914_front_left_front_front_right.mp4",
+      "question_id": "scene-0914_scene_agents",
+      "duration": 20.249983578200606,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: pedestrian: from <11.75> to <17.85> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.10>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0915",
+      "video_file": "videos/scene-0915_front_left_front_front_right.mp4",
+      "question_id": "scene-0915_scene_agents",
+      "duration": 20.350616301089023,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: truck: from <11.00> to <20.35> seconds; trailer: from <15.85> to <20.35> seconds; car: from <17.35> to <20.35> seconds; traffic_cone: from <17.35> to <20.35> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.\ncar: From<16> to<33>.\ntruck: From<33> to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.14>.\ncar: From<8.14> to<16.79>.\ntruck: From<16.79> to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to.\ncar: From to.\ntruck: From to."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0917",
+      "video_file": "videos/scene-0917_front_left_front_front_right.mp4",
+      "question_id": "scene-0917_scene_agents",
+      "duration": 20.399268412578685,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: pedestrian: from <0.00> to <10.40> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.16>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0921",
+      "video_file": "videos/scene-0921_front_left_front_front_right.mp4",
+      "question_id": "scene-0921_scene_agents",
+      "duration": 20.401521854065304,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <10.60> to <16.50> seconds; pedestrian: from <13.60> to <20.40> seconds; truck: from <13.60> to <20.40> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.16>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0922",
+      "video_file": "videos/scene-0922_front_left_front_front_right.mp4",
+      "question_id": "scene-0922_scene_agents",
+      "duration": 20.399258263041762,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: bus: from <5.50> to <13.40> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.16>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0923",
+      "video_file": "videos/scene-0923_front_left_front_front_right.mp4",
+      "question_id": "scene-0923_scene_agents",
+      "duration": 19.89998268701506,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: truck: from <14.50> to <19.90> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<7.96>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0924",
+      "video_file": "videos/scene-0924_front_left_front_front_right.mp4",
+      "question_id": "scene-0924_scene_agents",
+      "duration": 20.0503564708065,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <0.00> to <0.50> seconds; pedestrian: from <0.50> to <5.55> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.02>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0925",
+      "video_file": "videos/scene-0925_front_left_front_front_right.mp4",
+      "question_id": "scene-0925_scene_agents",
+      "duration": 20.04979366187799,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: pedestrian: from <4.55> to <12.15> seconds.",
+      "prediction_raw": "pedestrian: From<0> to.",
+      "prediction_seconds": "pedestrian: From<0.00> to."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0926",
+      "video_file": "videos/scene-0926_front_left_front_front_right.mp4",
+      "question_id": "scene-0926_scene_agents",
+      "duration": 20.400364619199827,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <0.00> to <3.55> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.16>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0928",
+      "video_file": "videos/scene-0928_front_left_front_front_right.mp4",
+      "question_id": "scene-0928_scene_agents",
+      "duration": 19.999520011519724,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <6.00> to <13.55> seconds; motorcycle: from <13.05> to <17.55> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0963",
+      "video_file": "videos/scene-0963_front_left_front_front_right.mp4",
+      "question_id": "scene-0963_scene_agents",
+      "duration": 19.999440015679564,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: truck: from <15.50> to <18.95> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0966",
+      "video_file": "videos/scene-0966_front_left_front_front_right.mp4",
+      "question_id": "scene-0966_scene_agents",
+      "duration": 20.10020688505623,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: pedestrian: from <0.00> to <12.25> seconds; truck: from <0.00> to <12.25> seconds; car: from <1.40> to <5.35> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.04>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0967",
+      "video_file": "videos/scene-0967_front_left_front_front_right.mp4",
+      "question_id": "scene-0967_scene_agents",
+      "duration": 20.199910135033935,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: motorcycle: from <3.50> to <10.35> seconds; pedestrian: from <3.50> to <10.35> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.08>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0969",
+      "video_file": "videos/scene-0969_front_left_front_front_right.mp4",
+      "question_id": "scene-0969_scene_agents",
+      "duration": 20.00040000800016,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: pedestrian: from <0.00> to <9.50> seconds; car: from <0.00> to <18.50> seconds.",
+      "prediction_raw": "pedestrian: from<0> to<16>.",
+      "prediction_seconds": "pedestrian: from<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-0971",
+      "video_file": "videos/scene-0971_front_left_front_front_right.mp4",
+      "question_id": "scene-0971_scene_agents",
+      "duration": 19.99871008311902,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "No causal agent is labeled for this scene.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.00>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-1059",
+      "video_file": "videos/scene-1059_front_left_front_front_right.mp4",
+      "question_id": "scene-1059_scene_agents",
+      "duration": 20.049833862033974,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <6.05> to <18.55> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.02>."
+    },
+    {
+      "dataset_name": "nuscenes_multiview_scene_agents",
+      "video_id": "scene-1065",
+      "video_file": "videos/scene-1065_front_left_front_front_right.mp4",
+      "question_id": "scene-1065_scene_agents",
+      "duration": 19.999530011138738,
+      "prompt": "<image>\nThis multi-view driving video combines CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT. The following agent classes may affect the ego vehicle behavior: animal, barrier, bicycle, bus, car, construction_vehicle, motorcycle, pedestrian, traffic_cone, trailer, truck. Identify every agent in this video that is causal for the ego vehicle behavior, and report when each one affects the ego vehicle. When multiple agents of the same class overlap in time, report them as one entry covering the combined interval. Reply with one entry per causal agent or same-class group using the format: {class}: from <start_seconds> to <end_seconds> seconds.",
+      "ground_truth": "Causal agents: car: from <12.05> to <17.50> seconds.",
+      "prediction_raw": "pedestrian: From<0> to<16>.",
+      "prediction_seconds": "pedestrian: From<0.00> to<8.00>."
+    }
+  ]
+}

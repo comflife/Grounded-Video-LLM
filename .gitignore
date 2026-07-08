@@ -1,10 +1,13 @@
 scripts/update.sh
 
-# Local experiment artifacts (data/weights live under /data)
-grounding_exp/
-nuscenes_grounded_videos/
-experiments/
-weight_path/
+# Local experiment artifacts and symlinks. These point to /data or contain
+# generated data, checkpoints, logs, and videos.
+/grounding_exp
+/grounding_exp/
+/nuscenes_grounded_videos
+/nuscenes_grounded_videos/
+/experiments/
+/weight_path/
 *.pth
 *.mp4
 *.jpg
